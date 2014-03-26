@@ -1,0 +1,561 @@
+//out: style.css
+/*
+Theme Name: Gordons
+Theme URI: http://www.eridesigns.com.au
+Author: Eri Mehmeti
+Author URI: http://www.eridesigns.com.au
+Description: Flat, minimalistic portfolio theme for WordPress. Enjoy
+Version: 0.0.1
+*/
+@import "css/less/bootstrap.less";
+
+/* responsive fixes */
+@media (max-width: 768px) { 
+	.navbar {
+		float: none !important;
+	}
+
+}
+/* branding */
+.top-nav, .footer, .navbar ul li  {
+    background-color: @body-bg;
+}
+	
+.navbar ul li:hover, .navbar ul li:focus {
+    background-color: @body-bg;
+    opacity: @opacity;
+}
+	
+.details {
+	border-color: @body-bg;
+	background-color: darken(@body-bg, 5%);
+}
+	
+.nav li a, .footer-navbar li a, .social li i, .logo a, .details h3 a, .footer-nav {
+	color: @link-color;
+}
+	
+a:hover, .nav li a:hover, .footer-navbar li a:hover, .social li i:hover, .logo a:hover, .details h3 a:hover, .details p, .headline, .error-404 {
+	color: @link-color;
+	opacity: @opacity;
+}
+.navbar ul li:last-child {
+	border-bottom-color: @link-color;
+}
+	
+
+/* layout */
+body  {
+	.paragraph-font;
+}
+
+label {
+	font-weight: normal;
+}
+
+.top-nav {
+	padding-bottom: 27px;
+	padding-top: 15px;
+	position: fixed;
+	display: block;
+	top:0;
+	width: 100%;
+	z-index: 12;
+}
+
+.logo a {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.logo img {
+	height: auto;
+	margin-bottom: -30px;
+    margin-top: -35px;
+}
+
+.nav {
+	position: relative;
+    top: 10px;
+}
+
+.navbar li {
+	float: left;
+	margin-left: 35px;
+}
+
+.navbar li ul li {
+	margin-left: 0;
+	float: none;
+}
+
+.navbar li:first-child {
+	margin-left: 0;
+}
+
+.nav li a {
+	.headline-font;
+	text-transform: uppercase;
+}
+
+.nav li a:hover {
+	color: @white;
+}
+
+/* drop down */
+.navbar, .navbar, .footer-navbar ul * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.navbar li {
+	position: relative;
+}
+.navbar ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+}
+.navbar > li {
+	float: left;
+}
+.navbar li:hover > ul,
+.navbar li.sfHover > ul {
+	display: block;
+}
+
+.navbar a {
+	display: block;
+	position: relative;
+}
+.navbar ul ul {
+	top: 0;
+	left: 100%;
+}
+
+.navbar {
+	float: left;
+}
+.navbar ul {
+	min-width: 12em;
+	margin-top: 28px;
+	*width: 12em; 
+}
+.navbar a {
+	padding: .75em .8em;
+	text-decoration: none;
+	zoom: 1; /* IE7 */
+}
+
+.navbar ul li {
+	white-space: nowrap;
+	*white-space: normal; 
+	-webkit-transition: background .2s;
+	transition: background .2s;
+	padding-left: 15px;
+    padding-right: 15px;
+}
+.navbar ul li:last-child {
+	padding-bottom: 2px;
+	border-bottom: 5px solid @white;
+}
+.navbar ul li a {
+	border-bottom: 1px solid @gray-light;
+}
+
+.navbar ul li:last-child a {
+	border-bottom: 0px !important;
+}
+
+.navbar ul li:hover,
+.navbar ul li.sfHover {
+	-webkit-transition: none;
+	transition: none;
+}
+
+/* mobile nav */
+.tinynav { display: none; }
+
+/* styles for mobile */
+@media screen and (max-width: 800px) {
+    .tinynav { 
+    border: 1px solid @whiteish;
+    display: block;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 7px;
+    width: 100%; 
+    }
+    .navbar { display: none; }
+}
+
+/* header */
+.overlay {
+	background: url(images/overlay.png) repeat 0 0 scroll transparent !important;
+	padding-bottom: 40px;
+    padding-top: 90px;
+}
+
+.eri_single {
+	padding-bottom: 30px;
+	padding-top: 85px;
+}
+
+.header .content {
+	margin: 125px auto;
+    max-width: 80%;
+    width: 100%;
+}
+
+.header .index-content {
+	margin: 45px auto;
+}
+
+.headline {
+	font-size: @font-size-headline;
+	font-family: @font-family-serif-headline;
+}
+
+h1, h2 ,h3 ,h4 ,h5, h6, .btn {
+	font-family: @font-family-serif-headline;
+}
+
+.pos {
+	top: 65px;
+}
+
+.eri_page .content {
+	margin: 40px auto;
+    max-width: 70%;
+    width: 100%;
+    padding-top: 85px;
+	padding-bottom: 30px;
+}
+
+.eri_page .content article {
+    background-color: @white;
+    border-bottom: 10px solid @whiteish;
+    margin-bottom: 45px;
+    padding: 15px 45px;
+}
+
+.eri_single .content {
+	width: none !important;
+	max-width: none !important;
+}
+
+.eri_single .content article {
+    background-color: @white;
+    border-bottom: 10px solid @whiteish;
+    margin-bottom: 45px;
+    padding: 20px;
+}
+
+.content article a {
+    color: @body-bg;
+}
+
+.entry-title {
+	border-bottom: 1px solid @gray-light;
+    line-height: 35px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.entry-meta {
+	padding-bottom: 20px;
+}
+
+.entry-date, .entry-meta .author {
+	text-transform: uppercase;
+}
+
+.screen-reader-text {
+	visibility: hidden;
+}
+
+.nav-previous {
+	width: 50%;
+	float: left;
+}
+
+.nav-next {
+	width: 50%;
+	float: right;
+}
+
+.nav-next a {
+	float: right;
+}
+
+
+/* product */
+.single_books .content article {
+	min-height: 385px;
+}
+.catalog {
+	.margin-top;
+}
+
+.product {
+	margin-bottom: 45px;
+}
+
+.product .book-holder {
+	border: 1px solid @body-bg;
+	background:url(images/bg_pattern.png) repeat scroll 0 0 @body-bg;
+	display: block;
+}
+
+.details {
+	text-align: center;
+	border: 1px solid @body-bg;
+}
+
+.details h3 a {
+	color: @black;
+	font-size: 22px;
+}
+
+.details h3 a:hover {
+	color: @gray-light;
+}
+
+.details p {
+	font-weight: 400;
+}
+
+.img-responsive:hover {
+	opacity: @opacity;
+}
+
+.thumb {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.product-thumb {
+	margin: 0 auto;
+	display: block;
+	padding-top: 35px;
+	max-width: 230px;
+	max-height: 270px;
+}
+
+.product a .product-hover {
+    bottom: 140px;
+    display: block;
+    margin: 0 auto;
+    padding: 1px;
+    position: relative;
+    text-align: center;
+    visibility: hidden;
+    width: 15%;
+}
+
+.product a:hover .product-hover {
+	visibility: visible;
+}
+
+a.product-hover h4 {
+	text-decoration: none;
+}
+
+/* footer */
+.footer-menu {
+	padding-bottom: 120px;
+    padding-top: 25px;
+}
+
+.footer-nav {
+	color: @white;
+	text-transform: uppercase;
+}
+
+.footer-nav span {
+	.headline-font()
+}
+
+.footer-navbar {
+	list-style-type: none;
+	padding: 0;
+	color: @gray-light;
+	text-transform: uppercase;
+}
+
+.footer-navbar li {
+	float: left;
+	margin-left: 35px;
+}
+
+.footer-navbar li:first-child {
+	margin-left: 0;
+}
+
+.footer-navbar li a {
+	text-transform: uppercase;
+	.headline-font()
+}
+
+.social {
+	display: block;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.social li {
+	float: left;
+}
+
+.social li i {
+	font-size: 18px;
+}
+
+.footer-widgets {
+	padding-top: 30px;
+}
+
+.footer-widgets ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+.footer-widgets ul li a {
+	color: @white;
+}
+
+.copyright, .copyright a {
+	text-align: center;
+	color: @gray-light;
+}
+
+/* Form */
+.has-error span {
+	color: @gray-light !important;
+	font-size: 12px;
+}
+
+/* WordPress */
+.entry-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.alignleft {
+  float: left;
+  margin-right: 15px;
+}
+
+
+.alignright {
+  float: right;
+  margin-left: 15px;
+}
+
+.wp-caption {
+  padding: 10px;
+  background-color: #333;
+  margin-bottom: 15px;
+  max-width: 100%;
+  height: auto;
+}
+
+.wp-caption img {
+  margin-bottom: 15px;
+}
+
+/* comments */
+.comments-area {
+  margin-top: 20px;
+}
+
+.comment-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.comments-title, #commentform p, #commentform p a, #respond {
+	color: @white;
+}
+
+.comment {
+  color: @gray-dark;
+  margin-top: 10px;
+}
+
+.comment-author {
+	text-transform: capitalize;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed @whiteish;
+}
+
+.comment-author img {
+  float: right;
+}
+
+.comment-metadata {
+  margin-top: 10px;
+}
+
+.comment-content {
+  clear: both;
+  padding-top: 20px;
+}
+
+/* sidebar */
+.widget-single {
+	background-color: @white;
+    border-bottom: 10px solid @whiteish;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+.widget-area ul, #sidebar ul {
+	padding: 0;
+	list-style-type: none;
+	line-height: 22px;
+	letter-spacing: 1px;
+	color: @gray-light;
+}
+
+.widget-area ul li {
+	border-bottom: 1px dashed @whiteish;
+    padding: 8px 0;
+}
+
+.widget-area ul li:before {
+	content: "";
+	display: inline;
+	font-size: 15px;
+}
+
+.widget-area ul li a {
+	color: @body-bg;
+	text-transform: capitalize;
+	padding-left: 3px;
+}
+
+.widget-area ul li a:hover {
+	color: darken(@body-bg,5%);
+}
+
+.widget-head {
+	line-height: 22px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+/* single book page */
+.widget .product {
+	margin-bottom: 0;
+}
+.widget .product-thumb {
+	padding-top: 0;
+	margin: 0 0 10px 0;
+}
+
+#buy-btn ul li:last-child {
+	margin-top: 10px;
+}
