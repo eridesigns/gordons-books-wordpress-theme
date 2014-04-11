@@ -21,7 +21,7 @@
         <?php endif; ?>
         
         <div class="product-hover btn btn-primary">
-	        <h4><?php echo rwmb_meta( 'book_price' ); ?></h4>
+	        <h4><?php echo rwmb_meta( 'eri_bronte_book_price' ); ?></h4>
         </div><!-- product hover -->
 
     	</a>
@@ -34,7 +34,7 @@
 				</a>
 			</h3>
 
-			<p><?php echo rwmb_meta( 'book_author' ); ?></p>
+			<p><?php echo rwmb_meta( 'eri_bronte_book_author' ); ?></p>
 		
 		</div><!-- details -->
 		
